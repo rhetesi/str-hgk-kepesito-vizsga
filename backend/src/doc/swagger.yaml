@@ -10,20 +10,20 @@ paths:
     get:
       description: Returns a list of students
       responses:
-        "200":
+        '200':
           description: List of students returned successfully
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Student"
-        "500":
+                  $ref: '#/components/schemas/Student'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
     post:
       description: Creates a new Student
       requestBody:
@@ -31,61 +31,59 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Student"
+              $ref: '#/components/schemas/Student'
       responses:
-        "201":
+        '201':
           description: Student has been created successfully
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Student"
-        "400":
+                $ref: '#/components/schemas/Student'
+        '400':
           description: Invalid request when the post data is invalid
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
-        "500":
+                $ref: '#/components/schemas/Error'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
   /student/{id}:
     get:
       description: Get a Student
       parameters:
         - in: path
-          # name: _id
           name: id
           required: true
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Returns a Student
           content:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/Student"
-        "404":
+                $ref: '#/components/schemas/Student'
+        '404':
           description: Student based on id is doesn't exist
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
-        "500":
+                $ref: '#/components/schemas/Error'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
     put:
       description: Updates a Student
       parameters:
         - in: path
-          # name: _id
           name: id
           required: true
           schema:
@@ -95,73 +93,72 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Student"
+              $ref: '#/components/schemas/Student'
       responses:
-        "200":
+        '200':
           description: Student has been updated successfully
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Student"
-        "400":
+                $ref: '#/components/schemas/Student'
+        '400':
           description: Invalid request when the post data is invalid
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
-        "500":
+                $ref: '#/components/schemas/Error'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
     delete:
       description: Removes a Student
       parameters:
         - in: path
-          # name: _id
           name: id
           required: true
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Student has been deleted successfully
           content:
             application/json:
               schema:
                 type: object
                 example: {}
-        "404":
+        '404':
           description: Student based on id is doesn't exist
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
-        "500":
+                $ref: '#/components/schemas/Error'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
   /school:
     get:
       description: Returns a list of schools
       responses:
-        "200":
+        '200':
           description: List of schools returned successfully
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/School"
-        "500":
+                  $ref: '#/components/schemas/School'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
     post:
       description: Creates a new School
       requestBody:
@@ -169,26 +166,26 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/School"
+              $ref: '#/components/schemas/School'
       responses:
-        "201":
+        '201':
           description: School has been created successfully
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/School"
-        "400":
+                $ref: '#/components/schemas/School'
+        '400':
           description: Invalid request when the post data is invalid
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
-        "500":
+                $ref: '#/components/schemas/Error'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
   /school/{id}:
     get:
       description: Get a School
@@ -199,25 +196,25 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Returns a School
           content:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/School"
-        "404":
+                $ref: '#/components/schemas/School'
+        '404':
           description: School based on id is doesn't exist
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
-        "500":
+                $ref: '#/components/schemas/Error'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
     put:
       description: Updates a School
       parameters:
@@ -231,26 +228,26 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/School"
+              $ref: '#/components/schemas/School'
       responses:
-        "200":
+        '200':
           description: School has been updated successfully
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Student"
-        "400":
+                $ref: '#/components/schemas/Student'
+        '400':
           description: Invalid request when the post data is invalid
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
-        "500":
+                $ref: '#/components/schemas/Error'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
     delete:
       description: Removes a School
       parameters:
@@ -260,25 +257,25 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: School has been deleted successfully
           content:
             application/json:
               schema:
                 type: object
                 example: {}
-        "404":
+        '404':
           description: School based on id is doesn't exist
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
-        "500":
+                $ref: '#/components/schemas/Error'
+        '500':
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Student:
@@ -312,8 +309,22 @@ components:
           type: string
         zipcode:
           type: number
-        classroom:
+        classrooms:
+          type: array
+          items:
+            $ref: '#/components/schemas/Classroom'
+    Classroom:
+      type: string      
+    Error:
+      type: object
+      required:
+        - message
+        - has_error
+      properties:
+        message:
           type: string
+        has_error:
+          type: boolean
     Error:
       type: object
       required:
